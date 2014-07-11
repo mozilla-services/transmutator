@@ -14,6 +14,9 @@ class Orchestrator(object):
         self.todo_dir = os.path.join(self.working_dir, 'todo')
         if not os.path.isdir(self.todo_dir):
             os.makedirs(self.todo_dir)
+        recurrent = os.path.join(self.todo_dir, 'recurrent')
+        if not os.path.isdir(recurrent):
+            os.makedirs(recurrent)
         self.doing_dir = os.path.join(self.working_dir, 'doing')
         if not os.path.isdir(self.doing_dir):
             os.makedirs(self.doing_dir)
